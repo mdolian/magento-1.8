@@ -46,7 +46,7 @@
                     <dbname><![CDATA[dbname]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
                     <model><![CDATA[mysql4]]></model>
-                    <type><![CDATA[pdo_mysql]]></type>
+                    <type><![CDATA[mysql]]></type>
                     <pdoType><![CDATA[]]></pdoType>
                     <active>1</active>
                 </connection>
