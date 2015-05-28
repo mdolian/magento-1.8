@@ -374,13 +374,29 @@ class Mage_Core_Model_App
      *
      * @return Mage_Core_Model_App
      */
-    protected function _initBaseConfig()
-    {
-        Varien_Profiler::start('mage::app::init::system_config');
-        $this->_config->loadBase();
-        Varien_Profiler::stop('mage::app::init::system_config');
-        return $this;
-    }
+     // my function that overrides the core one
+     protected function _initBaseConfig()
+     {
+         Varien_Profiler::start('mage::app::init::system_config');
+         $this->_config->loadBase();
+
+         /* Read DB connection config from environment variables */
+         $this->_config->getNode('global/resources/default_setup/connection'
+             ->setNode('host', getenv('DB_HOST'))
+             ->setNode('username', getenv('DB_USER'))
+             ->setNode('password', getenv('DB_PASS'))
+             ->setNode('dbname', getenv('DB_NAME'));
+
+         $this->_config->getNode('global/resources/redis_session'
+             ->setNode('host', getenv('REDIS_HOST'))
+             ->setNode('port', getenv('REDIS_PORT'));
+
+         $this->_config->getNode('global/resources/cache/backend_options'
+             ->setNode('server', getenv('REDIS_HOST'))
+             ->setNode('port', getenv('REDIS_PORT'));
+
+         return $this;
+     }
 
     /**
      * Initialize application cache instance
