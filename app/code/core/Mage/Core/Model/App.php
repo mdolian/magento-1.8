@@ -381,17 +381,17 @@ class Mage_Core_Model_App
          $this->_config->loadBase();
 
          /* Read DB connection config from environment variables */
-         $this->_config->getNode('global/resources/default_setup/connection'
+         $this->_config->getNode('global/resources/default_setup/connection')
              ->setNode('host', getenv('DB_HOST'))
              ->setNode('username', getenv('DB_USER'))
              ->setNode('password', getenv('DB_PASS'))
              ->setNode('dbname', getenv('DB_NAME'));
 
-         $this->_config->getNode('global/resources/redis_session'
+         $this->_config->getNode('global/resources/redis_session')
              ->setNode('host', getenv('REDIS_HOST'))
              ->setNode('port', getenv('REDIS_PORT'));
 
-         $this->_config->getNode('global/resources/cache/backend_options'
+         $this->_config->getNode('global/resources/cache/backend_options')
              ->setNode('server', getenv('REDIS_HOST'))
              ->setNode('port', getenv('REDIS_PORT'));
 
