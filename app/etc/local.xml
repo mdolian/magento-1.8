@@ -45,8 +45,8 @@
                     <password><![CDATA[]]></password>
                     <dbname><![CDATA[]]></dbname>
                     <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
-                    <model><![CDATA[]]></model>
-                    <type><![CDATA[]]></type>
+                    <model><![CDATA[mysql4]]></model>
+                    <type><![CDATA[pdo_mysql]]></type>
                     <pdoType><![CDATA[]]></pdoType>
                     <active>1</active>
                 </connection>
@@ -85,7 +85,7 @@
               <compress_threshold>20480</compress_threshold>  <!-- Strings below this size will not be compressed -->
               <compression_lib>gzip</compression_lib> <!-- Supports gzip, lzf and snappy -->
             </backend_options>
-        </cache>   
+        </cache>
     </global>
     <admin>
         <routers>
