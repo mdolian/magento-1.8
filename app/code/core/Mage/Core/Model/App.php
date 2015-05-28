@@ -387,11 +387,11 @@ class Mage_Core_Model_App
              ->setNode('password', getenv('DB_PASS'))
              ->setNode('dbname', getenv('DB_NAME'));
 
-         $this->_config->getNode('global/resources/redis_session')
+         $this->_config->getNode('global/redis_session')
              ->setNode('host', getenv('REDIS_HOST'))
              ->setNode('port', getenv('REDIS_PORT'));
 
-         $this->_config->getNode('global/resources/cache/backend_options')
+         $this->_config->getNode('global/cache/backend_options')
              ->setNode('server', getenv('REDIS_HOST'))
              ->setNode('port', getenv('REDIS_PORT'));
 
