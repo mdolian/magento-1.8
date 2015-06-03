@@ -387,8 +387,8 @@ class Mage_Core_Model_App
              ->setNode('password', getenv('DB_PASS'))
              ->setNode('dbname', getenv('DB_NAME'));
 
-         $this->_config->getNode('global/crypt')
-             ->setNode('key', getenv('KEY'))
+/*         $this->_config->getNode('global/crypt')
+             ->setNode('key', getenv('KEY')) */
 
      }
 
