@@ -387,7 +387,10 @@ class Mage_Core_Model_App
              ->setNode('password', getenv('DB_PASS'))
              ->setNode('dbname', getenv('DB_NAME'));
 
-         $this->_config->getNode('global/redis_session')
+         $this->_config->getNode('global/crypt')
+             ->setNode('key', getenv('KEY'))
+
+/*         $this->_config->getNode('global/redis_session')
              ->setNode('host', getenv('REDIS_HOST'))
              ->setNode('port', getenv('REDIS_PORT'));
 
@@ -395,7 +398,7 @@ class Mage_Core_Model_App
              ->setNode('server', getenv('REDIS_HOST'))
              ->setNode('port', getenv('REDIS_PORT'));
 
-         return $this;
+         return $this; */
      }
 
     /**
