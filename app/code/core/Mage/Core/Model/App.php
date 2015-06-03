@@ -390,15 +390,6 @@ class Mage_Core_Model_App
          $this->_config->getNode('global/crypt')
              ->setNode('key', getenv('KEY'))
 
-/*         $this->_config->getNode('global/redis_session')
-             ->setNode('host', getenv('REDIS_HOST'))
-             ->setNode('port', getenv('REDIS_PORT'));
-
-         $this->_config->getNode('global/cache/backend_options')
-             ->setNode('server', getenv('REDIS_HOST'))
-             ->setNode('port', getenv('REDIS_PORT'));
-
-         return $this; */
      }
 
     /**
