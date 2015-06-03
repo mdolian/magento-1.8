@@ -28,37 +28,37 @@
 <config>
     <global>
         <install>
-            <date><![CDATA[Thu, 30 Jan 2014 18:40:44 +0000]]></date>
+            <date>{{date}}</date>
         </install>
         <crypt>
-            <key><![CDATA[239u89asdf99sa0df89skdjfaskdj0293jslkd2093]]></key>
+            <key>{{key}}</key>
         </crypt>
         <disable_local_modules>false</disable_local_modules>
         <resources>
             <db>
-                <table_prefix><![CDATA[]]></table_prefix>
+                <table_prefix>{{db_prefix}}</table_prefix>
             </db>
             <default_setup>
                 <connection>
-                    <host><![CDATA[]]></host>
-                    <username><![CDATA[]]></username>
-                    <password><![CDATA[]]></password>
-                    <dbname><![CDATA[]]></dbname>
-                    <initStatements><![CDATA[SET NAMES utf8]]></initStatements>
-                    <model><![CDATA[]]></model>
-                    <type><![CDATA[]]></type>
-                    <pdoType><![CDATA[]]></pdoType>
+                    <host>{{db_host}}</host>
+                    <username>{{db_user}}</username>
+                    <password>{{db_pass}}</password>
+                    <dbname>{{db_name}}</dbname>
+                    <initStatements>{{db_init_statemants}}</initStatements>
+                    <model>{{db_model}}</model>
+                    <type>{{db_type}}</type>
+                    <pdoType>{{db_pdo_type}}</pdoType>
                     <active>1</active>
                 </connection>
             </default_setup>
         </resources>
-        <session_save><![CDATA[]]></session_save>
+        <session_save>{{session_save}}</session_save>
     </global>
     <admin>
         <routers>
             <adminhtml>
                 <args>
-                    <frontName><![CDATA[admin]]></frontName>
+                    <frontName>{{admin_frontname}}</frontName>
                 </args>
             </adminhtml>
         </routers>
