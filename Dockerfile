@@ -20,6 +20,5 @@ RUN apt-get -qqy update \
  && until rm -rf /var/lib/apt/lists; do sleep 1; done
 COPY php-fpm.conf /etc/php5/fpm/php-fpm.conf
 COPY www-pool.conf /etc/php5/fpm/pool.d/www.conf
-COPY xdebug-enabler.ini /etc/php5/fpm/conf.d/
 CMD ["/usr/local/sbin/php-fpm", "-y", "/etc/php5/fpm/php-fpm.conf"]
 EXPOSE 9001
